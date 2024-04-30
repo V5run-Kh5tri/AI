@@ -56,6 +56,7 @@ while success==False and len(pq)!=0:
   h=heuristic(curr)
   if heuristic(curr)==0:
     success=True
+    visited.append(curr)
   else:
     print('elif')
     states=generateBestState(curr)
@@ -71,5 +72,6 @@ while success==False and len(pq)!=0:
 
 if success:
   print('Found')
+  print('Visited list is:',visited)
 else:
   print('Not Found')
